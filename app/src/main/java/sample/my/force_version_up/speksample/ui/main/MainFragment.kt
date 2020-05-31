@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kotlinx.android.synthetic.main.main_fragment.*
 import sample.my.force_version_up.speksample.R
 
 class MainFragment : Fragment() {
@@ -24,7 +25,8 @@ class MainFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
-        // TODO: Use the ViewModel
+        // Use the ViewModel
+        message.text = viewModel.getText()
     }
 
 }
